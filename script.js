@@ -3,8 +3,11 @@ const scoreBoard = document.querySelector('.score');
 const startBtn = document.querySelector('.start-btn');
 const moles = document.querySelectorAll('.mole');
 const showRulesBtn = document.querySelector('.rules-btn')
+const showPlayersBtn = document.querySelector('.player-btn')
 const closeBtn = document.querySelector('.close-btn')
+const close2Btn = document.querySelector('.close2-btn')
 const rulesModal = document.getElementById('rules-modal')
+const playerModal = document.getElementById('player-modal')
 let lastHole;
 let timeUp = false;
 let score = 0;
@@ -17,6 +20,16 @@ function openModal() {
 
 function closeModal() {
   rulesModal.style.display = 'none'
+  startBtn.disabled = false;
+}
+
+function openPModal() {
+  playerModal.style.display = 'block'
+  startBtn.disabled = true;
+}
+
+function closePModal() {
+  playerModal.style.display = 'none'
   startBtn.disabled = false;
 }
 
@@ -172,7 +185,7 @@ function miss(e) {
       scoreBoard.textContent = score;    
   } else{
     
-    score--;
+    score++;
     scoreBoard.textContent = score;
     missSound.play();
     showMissedAnimation(e.target);
@@ -194,3 +207,8 @@ function showMissedAnimation(hole) {
 showRulesBtn.addEventListener('click', openModal)
 closeBtn.addEventListener('click', closeModal)
 rulesModal.addEventListener('click', closeModal)
+
+//Add event listeners to close and open the modal
+showPlayersBtn.addEventListener('click', openPModal)
+close2Btn.addEventListener('click', closePModal)
+playerModal.addEventListener('click', closePModal)
