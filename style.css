@@ -12,6 +12,25 @@ html {
     box-sizing: inherit;
   }
   
+  .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+            align-items: center;
+        }
+        .text {
+            flex: 1;
+        }
+
   body {
     height: 85%;
     padding: 0;
@@ -187,6 +206,7 @@ html {
   }
 
   .start-btn {
+  	margin-right: 1rem;
     background-color: #4CAF50; /* Green background */
     box-shadow: 0 5px 0 #388E3C; /* Slight shadow effect */
   }
@@ -208,7 +228,7 @@ html {
   }
  
   .rules-btn {
-    margin-left: 1rem;
+    margin-right: 1rem;
     background: #fe4a49;
     box-shadow: 0 5px 0 #da3f3f;
   }
@@ -219,6 +239,21 @@ html {
   }
   
   .rules-btn:active {
+    box-shadow: 0 2px 0 #da3f3f; /* Reduced shadow */
+  }
+
+  .player-btn {
+    /*margin-left: 1rem;*/
+    background: #fe4a49;
+    box-shadow: 0 5px 0 #da3f3f;
+  }
+
+  .player-btn:hover {
+    background-color: #f14343;
+    box-shadow: 0 3px 0 #c43838; /* Adjust shadow */
+  }
+  
+  .player-btn:active {
     box-shadow: 0 2px 0 #da3f3f; /* Reduced shadow */
   }
   
@@ -264,6 +299,22 @@ html {
 
   .close-btn:hover,
   .close-btn:focus {
+    color: white;
+    cursor: pointer;
+  }
+
+
+    .close2-btn {
+    position: absolute;
+    right: 2.4rem;
+    top: 0;
+    font-size: 8rem;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  .close2-btn:hover,
+  .close2-btn:focus {
     color: white;
     cursor: pointer;
   }
