@@ -116,7 +116,7 @@ html {
   }
   
   .mole{
-	position: absolute;
+  position: absolute;
     top: 100%;
     width: 100%;
     height: 100%;
@@ -153,8 +153,17 @@ html {
     transition: all 0.4s;
   }
 
-  .rajni {
-    background: url("rajni.png") center no-repeat;
+  .senthil {
+    background: url("senthil.png") center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+  }
+    .nothing {
+    background: url("nothing.png") center no-repeat;
     background-size: 60%;
     position: absolute;
     bottom: 100%;
@@ -163,7 +172,7 @@ html {
     transition: all 0.4s;
   }
   
-  .hole.up .rajni {
+  .hole.up .senthil {
     top: 0;
   }
 
@@ -175,6 +184,9 @@ html {
   }
 
   .hole.up .bangali {
+    top: 0;
+  }
+  .hole.up .nothing {
     top: 0;
   }
   
@@ -206,7 +218,7 @@ html {
   }
 
   .start-btn {
-  	margin-right: 1rem;
+    margin-right: 1rem;
     background-color: #4CAF50; /* Green background */
     box-shadow: 0 5px 0 #388E3C; /* Slight shadow effect */
   }
