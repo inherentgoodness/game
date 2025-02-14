@@ -61,12 +61,14 @@ function randomPerson(count, id) {
   }  
   let cur = '';
   if(idx == 1 || idx == 3){
-    cur = 'rajni';    
-  } else if (idx == 0 || idx == 4 || idx == 6){
+    cur = 'senthil';    
+  } else if (idx == 0 || idx == 4 ){
     cur = 'meesho';
-  } else if (idx == 2 || idx == 5 || idx == 9){
+  } else if (idx == 2 || idx == 5 ){
     cur = 'bangali';
-  } else{
+  } else if (idx == 6 || idx == 9){
+    cur = 'nothing';
+  }else{
    cur = 'me';
   }
   if(prev === cur){
@@ -176,8 +178,9 @@ function miss(e) {
   if ((e.target.classList.contains('hole') && e.target.classList.contains('up'))
     || e.target.classList.contains('meesho')
     || e.target.classList.contains('me')
-    || e.target.classList.contains('rajni')
-    || e.target.classList.contains('bangali'))
+    || e.target.classList.contains('senthil')
+    || e.target.classList.contains('bangali')
+    || e.target.classList.contains('nothing'))
    {
     
       score++;
